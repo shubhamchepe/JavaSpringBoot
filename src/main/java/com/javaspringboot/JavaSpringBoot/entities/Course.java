@@ -1,10 +1,17 @@
 package com.javaspringboot.JavaSpringBoot.entities;
 
-public class Course {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class Course {
+    @Id
 	private long id;
 	private String title;
 	private String description;
+	
+	public Course() {
+    }
 	
 	public Course(long id, String title, String description) {
 		super();
